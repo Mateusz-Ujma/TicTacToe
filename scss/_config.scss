@@ -1,0 +1,133 @@
+$blue-color: #0671e4;
+$red-color: #e52f06;
+$orange-color: #e57906;
+$green-color: #72e506;
+$purple-color: #7906e5;
+$yellow-color: #e5c306;
+$grey-color: #747474;
+$grey-color-opacity: #74747430;
+$black-color: #272727;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin transition-ease($time) {
+    transition: ease-in-out $time;
+}
+
+@mixin text-shadow {
+    text-shadow: 1px 2px 6px $black-color;
+}
+
+@mixin box-shadow {
+    box-shadow: 0 0 8px 1px $black-color;
+}
+
+.text-shadow-win {
+    @include text-shadow;
+}
+
+.win-line-one {
+    visibility: visible;
+    position: absolute;
+    top: 26vh;
+    left: 37vw;
+    background: $green-color;
+    height: 20px;
+    width: 25vw;
+    z-index: 3;
+}
+.win-line-two {
+    visibility: visible;
+    position: absolute;
+    top: 48vh;
+    left: 37vw;
+    background: $green-color;
+    height: 20px;
+    width: 25vw;
+    z-index: 3;
+}
+.win-line-three {
+    visibility: visible;
+    position: absolute;
+    top: 71vh;
+    left: 37vw;
+    background: $red-color;
+    height: 20px;
+    width: 25vw;
+    z-index: 3;
+}
+.win-line-four {
+    visibility: visible;
+    position: absolute;
+    top: 48vh;
+    left: 25vw;
+    background: $green-color;
+    height: 20px;
+    width: 28vw;
+    transform: rotate(90deg) translate(0px, 0px);
+    z-index: 3;
+}
+.win-line-five {
+    visibility: visible;
+    position: absolute;
+    top: 48vh;
+    left: 36vw;
+    background: $green-color;
+    height: 20px;
+    width: 28vw;
+    transform: rotate(90deg) translate(0px, 0px);
+    z-index: 3;
+}
+.win-line-six {
+    visibility: visible;
+    position: absolute;
+    top: 48vh;
+    left: 47vw;
+    background: $green-color;
+    height: 20px;
+    width: 28vw;
+    transform: rotate(90deg) translate(0px, 0px);
+    z-index: 3;
+}
+.win-line-seven {
+    visibility: visible;
+    position: absolute;
+    top: 48vh;
+    left: 47vw;
+    background: $green-color;
+    height: 20px;
+    width: 33vw;
+    transform: rotate(45deg) translate(-160px, 170px);
+    z-index: 3;
+}
+.win-line-eight {
+    visibility: visible;
+    position: absolute;
+    top: 48vh;
+    left: 47vw;
+    background: $green-color;
+    height: 20px;
+    width: 33vw;
+    transform: rotate(-45deg) translate(-160px, -160px);
+    z-index: 3;
+}
+
+.sizer {
+    font-size: 10rem;
+    position: absolute;
+    top: 38vh;
+    z-index: 5;
+    color: $green-color;
+    @include transition-ease(.4s)
+}
+
+.positioner {
+    position: absolute;
+    top: 25vh;
+    z-index: 8;
+}
+

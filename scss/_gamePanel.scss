@@ -1,0 +1,180 @@
+.game {
+    @include box-shadow;
+    visibility: hidden;
+    font-family: "Kanit", sans-serif;
+    background: $purple-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    width: 36rem;
+
+    &-name {
+        position: absolute;
+        top: 0;
+        margin: 1rem;
+        font-size: 5rem;
+        color: $orange-color;
+        @include text-shadow;
+    }
+    &-whose-turn {
+        @include text-shadow;
+        &-text {
+            visibility: hidden;
+            position: absolute;
+            z-index: 4;
+            bottom: 0;
+            margin: 1rem;
+            font-size: 3rem;
+            color: $orange-color;
+            font-weight: 700;
+            @include text-shadow;
+            @include transition-ease(5s);
+        }
+        &-bg {
+            opacity: 0.8;
+            visibility: hidden;
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            background: $grey-color;
+            z-index: 5;
+            @include transition-ease(5s);
+        }
+    }
+
+    &-board {
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        .one {
+            border-bottom: 5px solid $orange-color;
+            border-right: 5px solid $orange-color;
+        }
+        .two {
+            border-left: 5px solid $orange-color;
+            border-bottom: 5px solid $orange-color;
+            border-right: 5px solid $orange-color;
+        }
+        .three {
+            border-left: 5px solid $orange-color;
+            border-bottom: 5px solid $orange-color;
+        }
+        .four {
+            border-top: 5px solid $orange-color;
+            border-right: 5px solid $orange-color;
+            border-bottom: 5px solid $orange-color;
+        }
+        .five {
+            border: 5px solid $orange-color;
+        }
+        .six {
+            border-left: 5px solid $orange-color;
+            border-top: 5px solid $orange-color;
+            border-bottom: 5px solid $orange-color;
+        }
+        .seven {
+            border-top: 5px solid $orange-color;
+            border-right: 5px solid $orange-color;
+        }
+        .eight {
+            border-right: 5px solid $orange-color;
+            border-left: 5px solid $orange-color;
+            border-top: 5px solid $orange-color;
+        }
+        .nine {
+            border-top: 5px solid $orange-color;
+            border-left: 5px solid $orange-color;
+        }
+    }
+    &-square {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 12rem;
+        width: 12rem;
+        &-in {            
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            height: 12rem;
+            width: 12rem;
+        }
+        &:hover {
+            background-color: $grey-color-opacity;
+        }
+        .sign {
+            margin: -1rem;
+            font-size: 9rem;
+            color: $yellow-color;
+        }
+    }
+    &-win-line {
+        position: absolute;
+        visibility: hidden;
+        border-radius: 45px;
+    }
+
+    &-play-btn {
+        height: 4rem;
+        width: 25rem;
+        position: absolute;
+        top: 40vh;
+        z-index: 10;
+        background: $grey-color;
+        border: none;
+        border-radius: 4px;
+        font-size: 2.5rem;
+        font-family: "Kanit", sans-serif;
+        color: $orange-color;
+        @include box-shadow;
+        &-text {
+            display: block;
+            height: 4rem;
+            width: 100%;
+            @include text-shadow;
+            &:hover {
+                text-shadow: 1px 1px 1px $black-color;
+                @include transition-ease(0.1s);
+            }
+        }
+        &:hover {
+            @include transition-ease(0.1s);
+            box-shadow: 0 0 2px 1px $black-color;
+        }
+    }
+    &-reset-btn {
+        z-index: 10;
+        height: 4rem;
+        width: 25rem;
+        position: absolute;
+        top: 60vh;
+        z-index: 10;
+        background: $grey-color;
+        border: none;
+        border-radius: 4px;
+        font-size: 2.5rem;
+        font-family: "Kanit", sans-serif;
+        color: $orange-color;
+        @include box-shadow;
+        &-text {
+            display: block;
+            height: 4rem;
+            width: 100%;
+            @include text-shadow;
+            &:hover {
+                text-shadow: 1px 1px 1px $black-color;
+                @include transition-ease(0.1s);
+            }
+        }
+        &:hover {
+            @include transition-ease(0.1s);
+            box-shadow: 0 0 2px 1px $black-color;
+        }
+    }
+}
