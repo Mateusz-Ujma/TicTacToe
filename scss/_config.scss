@@ -47,96 +47,11 @@ $black-color: #272727;
     }
 }
 @mixin media-md-height {
-    @media screen and (min-height: 768px) {
+    @media screen and (max-height: 600px) {
         @content;
     }
 }
 
-.win-line-one {
-    visibility: visible;
-    position: absolute;
-    top: 280px;
-    left: 15vw;
-    background: $green-color;
-    height: 20px;
-    width: 320px;
-    z-index: 3;
-}
-.win-line-two {
-    visibility: visible;
-    position: absolute;
-    top: 410px;
-    left: 15vw;
-    background: $green-color;
-    height: 20px;
-    width: 320px;
-    z-index: 3;
-}
-.win-line-three {
-    visibility: visible;
-    position: absolute;
-    top: 540px;
-    left: 15vw;
-    background: $green-color;
-    height: 20px;
-    width: 320px;
-    z-index: 3;
-}
-.win-line-four {
-    visibility: visible;
-    position: absolute;
-    top: 400px;
-    left: -15vw;
-    background: $green-color;
-    height: 20px;
-    width: 320px;
-    transform: rotate(90deg) translate(0px, 0px);
-    z-index: 3;
-}
-.win-line-five {
-    visibility: visible;
-    position: absolute;
-    top: 400px;
-    left: 65px;
-    background: $green-color;
-    height: 20px;
-    width: 320px;
-    transform: rotate(90deg) translate(0px, 0px);
-    z-index: 3;
-}
-.win-line-six {
-    visibility: visible;
-    position: absolute;
-    top: 400px;
-    left: 43vw;
-    background: $green-color;
-    height: 20px;
-    width: 320px;
-    transform: rotate(90deg) translate(0px, 0px);
-    z-index: 3;
-}
-.win-line-seven {
-    visibility: visible;
-    position: absolute;
-    top: 48vh;
-    left: 47vw;
-    background: $green-color;
-    height: 20px;
-    width: 33vw;
-    transform: rotate(45deg) translate(-160px, 170px);
-    z-index: 3;
-}
-.win-line-eight {
-    visibility: visible;
-    position: absolute;
-    top: 48vh;
-    left: 47vw;
-    background: $green-color;
-    height: 20px;
-    width: 33vw;
-    transform: rotate(-45deg) translate(-160px, -160px);
-    z-index: 3;
-}
 
 .sizer {
     font-size: 4rem;
@@ -144,7 +59,15 @@ $black-color: #272727;
     top: 38vh;
     z-index: 5;
     color: $green-color;
-    @include transition-ease(.1s)
+    @include transition-ease(.1s);
+    &-red{
+        font-size: 4rem;
+    position: absolute;
+    top: 38vh;
+    z-index: 5;
+    color: $red-color;
+    @include transition-ease(.1s);
+    }
 }
 
 .positioner {
@@ -153,3 +76,9 @@ $black-color: #272727;
     z-index: 8;
 }
 
+.background-win{
+    background:$green-color;
+}
+.background-draw{
+    background:$red-color;
+}

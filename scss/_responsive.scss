@@ -1,0 +1,170 @@
+@include media-md-height{
+    .game{
+        width: 20rem;
+        height: 20rem;
+    
+        &-name {
+            position: absolute;
+            top: 0;            
+            font-size: 2rem;  
+            margin: 0;         
+        }
+        &-whose-turn {           
+            &-text {              
+                margin: 0rem;
+                font-size: 2rem;                
+            }            
+        }
+    
+        &-board {           
+            .one {
+                border-bottom: 2px solid $orange-color;
+                border-right: 2px solid $orange-color;
+            }
+            .two {
+                border-left: 2px solid $orange-color;
+                border-bottom: 2px solid $orange-color;
+                border-right: 2px solid $orange-color;
+            }
+            .three {
+                border-left: 2px solid $orange-color;
+                border-bottom: 2px solid $orange-color;
+            }
+            .four {
+                border-top: 2px solid $orange-color;
+                border-right: 2px solid $orange-color;
+                border-bottom: 2px solid $orange-color;
+            }
+            .five {
+                border: 2px solid $orange-color;
+            }
+            .six {
+                border-left: 2px solid $orange-color;
+                border-top: 2px solid $orange-color;
+                border-bottom: 2px solid $orange-color;
+            }
+            .seven {
+                border-top: 2px solid $orange-color;
+                border-right: 2px solid $orange-color;
+            }
+            .eight {
+                border-right: 2px solid $orange-color;
+                border-left: 2px solid $orange-color;
+                border-top: 2px solid $orange-color;
+            }
+            .nine {
+                border-top: 2px solid $orange-color;
+                border-left: 2px solid $orange-color;
+            }
+        }
+        &-square {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 6.65rem;
+            width: 6.65rem; 
+            .sign {                
+                font-size: 5rem;                
+            }
+        }      
+
+        &-play-btn-oneP {
+            top: 150px;          
+        }
+        &-play-btn-twoP {  
+            top: 300px;          
+        }
+    }
+}
+
+@include media-md-width{
+    .game{
+        width: 35rem;
+        height: 35rem;
+    
+        &-name {
+            position: absolute;
+            top: 0;            
+            font-size: 5rem;  
+            margin: 0;         
+        }       
+    
+        &-board {           
+            .one {
+                border-bottom: 4px solid $orange-color;
+                border-right: 4px solid $orange-color;
+            }
+            .two {
+                border-left: 4px solid $orange-color;
+                border-bottom: 4px solid $orange-color;
+                border-right: 4px solid $orange-color;
+            }
+            .three {
+                border-left: 4px solid $orange-color;
+                border-bottom: 4px solid $orange-color;
+            }
+            .four {
+                border-top: 4px solid $orange-color;
+                border-right: 4px solid $orange-color;
+                border-bottom: 4px solid $orange-color;
+            }
+            .five {
+                border: 4px solid $orange-color;
+            }
+            .six {
+                border-left: 4px solid $orange-color;
+                border-top: 4px solid $orange-color;
+                border-bottom: 4px solid $orange-color;
+            }
+            .seven {
+                border-top: 4px solid $orange-color;
+                border-right: 4px solid $orange-color;
+            }
+            .eight {
+                border-right: 4px solid $orange-color;
+                border-left: 4px solid $orange-color;
+                border-top: 4px solid $orange-color;
+            }
+            .nine {
+                border-top: 4px solid $orange-color;
+                border-left: 4px solid $orange-color;
+            }
+        }
+        &-square {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 11.65rem;
+            width: 11.65rem; 
+            .sign {                
+                font-size: 9rem;                
+            }
+        }      
+
+        
+    }
+    .sizer {
+        font-size: 8rem;
+        position: absolute;
+        top: 38vh;
+        z-index: 5;
+        color: $green-color;
+        @include transition-ease(.1s);
+        &-red{
+            font-size: 8rem;
+        position: absolute;
+        top: 38vh;
+        z-index: 5;
+        color: $red-color;
+        @include transition-ease(.1s);
+        }
+    }
+    
+    .positioner {
+        position: absolute;
+        top: 25vh;
+        z-index: 8;
+    }
+}

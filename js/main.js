@@ -8,7 +8,6 @@ const circleOpacity = "<i class=\"fa-regular fa-circle shadow\"></i>";
 const crossOpacity = "<i class=\"fa-solid fa-x shadow\"></i>";
 const gamePlace = document.querySelectorAll('.game-square');
 const whoseTurn = document.querySelector('.game-whose-turn');
-const winLine = document.querySelector('.game-win-line');
 const whoseTurnText = document.querySelector('.game-whose-turn-text');
 const whoseTurnBg = document.querySelector('.game-whose-turn-bg');
 const resetBtn = document.querySelector('.game-reset-btn');
@@ -20,7 +19,7 @@ let gameMode = false; // true == OnePlayer false == TwoPlayer
 let playerMove = true; // true == PlayerMove false == BotMove
 let listEmptySlot = [];
 let win = false;
-let turnNumber=0;
+let turnNumber = 0;
 
 
 
@@ -44,6 +43,8 @@ function hidderBtnOne() {
     playBtnOne.classList.remove('visible');
     playBtnTwo.classList.remove('visible');
     gameMode = true;
+    turn=true;
+    whoseTurnText.innerHTML = "TURN <i class=\"fa-regular fa-circle \"></i>" ;
     setTimeout(playGame, 10);
 }
 function hidderBtnTwo() {
@@ -72,22 +73,15 @@ function playGame() {
 
 }
 function resetGame() {
-    winLine.classList.remove('win-line-one');
-    winLine.classList.remove('win-line-two');
-    winLine.classList.remove('win-line-three');
-    winLine.classList.remove('win-line-four');
-    winLine.classList.remove('win-line-five');
-    winLine.classList.remove('win-line-six');
-    winLine.classList.remove('win-line-seven');
-    winLine.classList.remove('win-line-eight');
-    turnNumber=0;
+    
+    turnNumber = 0;
     win = false;
     turn = true;
     playerMove = true;
     whoseTurn.innerHTML = "";
     whoseTurn.classList.remove('sizer');
-    whoseTurn.classList.remove('positioner');
-    winLine.classList.remove('visible');
+    whoseTurn.classList.remove('sizer-red');
+    whoseTurn.classList.remove('positioner');    
     whoseTurnBg.classList.remove('visible');
     whoseTurnText.classList.remove('visible');
     resetBtn.classList.remove('visible');
@@ -98,6 +92,8 @@ function resetGame() {
         square.classList.remove('non-clickable');
         square.classList.remove('circle');
         square.classList.remove('cross');
+        square.classList.remove('background-win');
+        square.classList.remove('background-draw');
     });
 }
 
@@ -129,7 +125,10 @@ function whoWin() {
 
     if (gamePlace[0].classList.contains('circle') && gamePlace[1].classList.contains('circle') && gamePlace[2].classList.contains('circle')) {
         //circleWinOne
-        winLine.classList.add('win-line-one');
+        gamePlace[0].classList.add('background-win');
+        gamePlace[1].classList.add('background-win');
+        gamePlace[2].classList.add('background-win');
+
         gamePlace.forEach((square) => {
             square.classList.add('non-clickable');
         });
@@ -137,7 +136,9 @@ function whoWin() {
     }
     else if (gamePlace[3].classList.contains('circle') && gamePlace[4].classList.contains('circle') && gamePlace[5].classList.contains('circle')) {
         //circleWinTwo
-        winLine.classList.add('win-line-two');
+        gamePlace[3].classList.add('background-win');
+        gamePlace[4].classList.add('background-win');
+        gamePlace[5].classList.add('background-win');
         gamePlace.forEach((square) => {
             square.classList.add('non-clickable');
         });
@@ -145,7 +146,9 @@ function whoWin() {
     }
     else if (gamePlace[6].classList.contains('circle') && gamePlace[7].classList.contains('circle') && gamePlace[8].classList.contains('circle')) {
         //circleWinThree
-        winLine.classList.add('win-line-three');
+        gamePlace[6].classList.add('background-win');
+        gamePlace[7].classList.add('background-win');
+        gamePlace[8].classList.add('background-win');
         gamePlace.forEach((square) => {
             square.classList.add('non-clickable');
         });
@@ -153,7 +156,9 @@ function whoWin() {
     }
     else if (gamePlace[0].classList.contains('circle') && gamePlace[3].classList.contains('circle') && gamePlace[6].classList.contains('circle')) {
         //circleWinFour
-        winLine.classList.add('win-line-four');
+        gamePlace[0].classList.add('background-win');
+        gamePlace[3].classList.add('background-win');
+        gamePlace[6].classList.add('background-win');
         gamePlace.forEach((square) => {
             square.classList.add('non-clickable');
         });
@@ -161,7 +166,9 @@ function whoWin() {
     }
     else if (gamePlace[1].classList.contains('circle') && gamePlace[4].classList.contains('circle') && gamePlace[7].classList.contains('circle')) {
         //circleWinFive
-        winLine.classList.add('win-line-five');
+        gamePlace[1].classList.add('background-win');
+        gamePlace[4].classList.add('background-win');
+        gamePlace[7].classList.add('background-win');
         gamePlace.forEach((square) => {
             square.classList.add('non-clickable');
         });
@@ -169,7 +176,9 @@ function whoWin() {
     }
     else if (gamePlace[2].classList.contains('circle') && gamePlace[5].classList.contains('circle') && gamePlace[8].classList.contains('circle')) {
         //circleWinSix
-        winLine.classList.add('win-line-six');
+        gamePlace[2].classList.add('background-win');
+        gamePlace[5].classList.add('background-win');
+        gamePlace[8].classList.add('background-win');
         gamePlace.forEach((square) => {
             square.classList.add('non-clickable');
         });
@@ -177,7 +186,9 @@ function whoWin() {
     }
     else if (gamePlace[0].classList.contains('circle') && gamePlace[4].classList.contains('circle') && gamePlace[8].classList.contains('circle')) {
         //circleWinSeven
-        winLine.classList.add('win-line-seven');
+        gamePlace[0].classList.add('background-win');
+        gamePlace[4].classList.add('background-win');
+        gamePlace[8].classList.add('background-win');
         gamePlace.forEach((square) => {
             square.classList.add('non-clickable');
         });
@@ -185,7 +196,9 @@ function whoWin() {
     }
     else if (gamePlace[2].classList.contains('circle') && gamePlace[4].classList.contains('circle') && gamePlace[6].classList.contains('circle')) {
         //circleWinEight
-        winLine.classList.add('win-line-eight');
+        gamePlace[2].classList.add('background-win');
+        gamePlace[4].classList.add('background-win');
+        gamePlace[6].classList.add('background-win');
         gamePlace.forEach((square) => {
             square.classList.add('non-clickable');
         });
@@ -196,7 +209,9 @@ function whoWin() {
 
     else if (gamePlace[0].classList.contains('cross') && gamePlace[1].classList.contains('cross') && gamePlace[2].classList.contains('cross')) {
         //circleWinOne
-        winLine.classList.add('win-line-one');
+        gamePlace[0].classList.add('background-win');
+        gamePlace[1].classList.add('background-win');
+        gamePlace[2].classList.add('background-win');
         gamePlace.forEach((square) => {
             square.classList.add('non-clickable');
         });
@@ -204,7 +219,9 @@ function whoWin() {
     }
     else if (gamePlace[3].classList.contains('cross') && gamePlace[4].classList.contains('cross') && gamePlace[5].classList.contains('cross')) {
         //circleWinTwo
-        winLine.classList.add('win-line-two');
+        gamePlace[3].classList.add('background-win');
+        gamePlace[4].classList.add('background-win');
+        gamePlace[5].classList.add('background-win');
         gamePlace.forEach((square) => {
             square.classList.add('non-clickable');
         });
@@ -212,7 +229,9 @@ function whoWin() {
     }
     else if (gamePlace[6].classList.contains('cross') && gamePlace[7].classList.contains('cross') && gamePlace[8].classList.contains('cross')) {
         //circleWinThree
-        winLine.classList.add('win-line-three');
+        gamePlace[6].classList.add('background-win');
+        gamePlace[7].classList.add('background-win');
+        gamePlace[8].classList.add('background-win');
         gamePlace.forEach((square) => {
             square.classList.add('non-clickable');
         });
@@ -220,7 +239,9 @@ function whoWin() {
     }
     else if (gamePlace[0].classList.contains('cross') && gamePlace[3].classList.contains('cross') && gamePlace[6].classList.contains('cross')) {
         //circleWinFour
-        winLine.classList.add('win-line-four');
+        gamePlace[0].classList.add('background-win');
+        gamePlace[3].classList.add('background-win');
+        gamePlace[6].classList.add('background-win');
         gamePlace.forEach((square) => {
             square.classList.add('non-clickable');
         });
@@ -228,7 +249,9 @@ function whoWin() {
     }
     else if (gamePlace[1].classList.contains('cross') && gamePlace[4].classList.contains('cross') && gamePlace[7].classList.contains('cross')) {
         //circleWinFive
-        winLine.classList.add('win-line-five');
+        gamePlace[1].classList.add('background-win');
+        gamePlace[4].classList.add('background-win');
+        gamePlace[7].classList.add('background-win');
         gamePlace.forEach((square) => {
             square.classList.add('non-clickable');
         });
@@ -236,7 +259,9 @@ function whoWin() {
     }
     else if (gamePlace[2].classList.contains('cross') && gamePlace[5].classList.contains('cross') && gamePlace[8].classList.contains('cross')) {
         //circleWinSix
-        winLine.classList.add('win-line-six');
+        gamePlace[2].classList.add('background-win');
+        gamePlace[5].classList.add('background-win');
+        gamePlace[8].classList.add('background-win');
         gamePlace.forEach((square) => {
             square.classList.add('non-clickable');
         });
@@ -244,7 +269,9 @@ function whoWin() {
     }
     else if (gamePlace[0].classList.contains('cross') && gamePlace[4].classList.contains('cross') && gamePlace[8].classList.contains('cross')) {
         //circleWinSeven
-        winLine.classList.add('win-line-seven');
+        gamePlace[0].classList.add('background-win');
+        gamePlace[4].classList.add('background-win');
+        gamePlace[8].classList.add('background-win');
         gamePlace.forEach((square) => {
             square.classList.add('non-clickable');
         });
@@ -252,18 +279,23 @@ function whoWin() {
     }
     else if (gamePlace[2].classList.contains('cross') && gamePlace[4].classList.contains('cross') && gamePlace[6].classList.contains('cross')) {
         //circleWinEight
-        winLine.classList.add('win-line-eight');
+        gamePlace[2].classList.add('background-win');
+        gamePlace[4].classList.add('background-win');
+        gamePlace[6].classList.add('background-win');
         gamePlace.forEach((square) => {
             square.classList.add('non-clickable');
         });
         win = true;
     }
-    if(turnNumber==9){
-        winText="DRAW!!";
-        whoseTurn.classList.add('sizer');
+    if (turnNumber == 9) {
+        winText = "DRAW!!";
+        gamePlace.forEach((square) => {
+            square.classList.add('background-draw');
+        });
+        whoseTurn.classList.add('sizer-red');
         whoseTurn.classList.add('positioner');
         whoseTurn.innerHTML = winText;
-        winLine.classList.add('visible');
+        
         whoseTurnBg.classList.add('visible');
         whoseTurnText.classList.remove('visible');
         resetBtn.classList.add('visible');
@@ -278,7 +310,7 @@ function whoWin() {
         whoseTurn.classList.add('sizer');
         whoseTurn.classList.add('positioner');
         whoseTurn.innerHTML = winText;
-        winLine.classList.add('visible');
+        
         whoseTurnBg.classList.add('visible');
         whoseTurnText.classList.remove('visible');
         resetBtn.classList.add('visible');
@@ -325,12 +357,12 @@ function placeSign() {
         }
 
     }
-   
+
 
     turnNumber++;
     whoWin();
-    
-   
+
+
 
 }
 

@@ -9,104 +9,6 @@
   text-shadow: 1px 2px 6px #272727;
 }
 
-.win-line-one {
-  visibility: visible;
-  position: absolute;
-  top: 280px;
-  left: 15vw;
-  background: #72e506;
-  height: 20px;
-  width: 320px;
-  z-index: 3;
-}
-
-.win-line-two {
-  visibility: visible;
-  position: absolute;
-  top: 410px;
-  left: 15vw;
-  background: #72e506;
-  height: 20px;
-  width: 320px;
-  z-index: 3;
-}
-
-.win-line-three {
-  visibility: visible;
-  position: absolute;
-  top: 540px;
-  left: 15vw;
-  background: #72e506;
-  height: 20px;
-  width: 320px;
-  z-index: 3;
-}
-
-.win-line-four {
-  visibility: visible;
-  position: absolute;
-  top: 400px;
-  left: -15vw;
-  background: #72e506;
-  height: 20px;
-  width: 320px;
-  -webkit-transform: rotate(90deg) translate(0px, 0px);
-          transform: rotate(90deg) translate(0px, 0px);
-  z-index: 3;
-}
-
-.win-line-five {
-  visibility: visible;
-  position: absolute;
-  top: 400px;
-  left: 65px;
-  background: #72e506;
-  height: 20px;
-  width: 320px;
-  -webkit-transform: rotate(90deg) translate(0px, 0px);
-          transform: rotate(90deg) translate(0px, 0px);
-  z-index: 3;
-}
-
-.win-line-six {
-  visibility: visible;
-  position: absolute;
-  top: 400px;
-  left: 43vw;
-  background: #72e506;
-  height: 20px;
-  width: 320px;
-  -webkit-transform: rotate(90deg) translate(0px, 0px);
-          transform: rotate(90deg) translate(0px, 0px);
-  z-index: 3;
-}
-
-.win-line-seven {
-  visibility: visible;
-  position: absolute;
-  top: 48vh;
-  left: 47vw;
-  background: #72e506;
-  height: 20px;
-  width: 33vw;
-  -webkit-transform: rotate(45deg) translate(-160px, 170px);
-          transform: rotate(45deg) translate(-160px, 170px);
-  z-index: 3;
-}
-
-.win-line-eight {
-  visibility: visible;
-  position: absolute;
-  top: 48vh;
-  left: 47vw;
-  background: #72e506;
-  height: 20px;
-  width: 33vw;
-  -webkit-transform: rotate(-45deg) translate(-160px, -160px);
-          transform: rotate(-45deg) translate(-160px, -160px);
-  z-index: 3;
-}
-
 .sizer {
   font-size: 4rem;
   position: absolute;
@@ -117,10 +19,28 @@
   transition: ease-in-out 0.1s;
 }
 
+.sizer-red {
+  font-size: 4rem;
+  position: absolute;
+  top: 38vh;
+  z-index: 5;
+  color: #e52f06;
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
+}
+
 .positioner {
   position: absolute;
   top: 25vh;
   z-index: 8;
+}
+
+.background-win {
+  background: #72e506;
+}
+
+.background-draw {
+  background: #e52f06;
 }
 
 .game {
@@ -270,11 +190,6 @@
   color: #e5c306;
 }
 
-.game-win-line {
-  position: absolute;
-  border-radius: 45px;
-}
-
 .game-play-btn-oneP {
   visibility: hidden;
   height: 4rem;
@@ -386,6 +301,177 @@
   transition: ease-in-out 0.1s;
   -webkit-box-shadow: 0 0 2px 1px #272727;
           box-shadow: 0 0 2px 1px #272727;
+}
+
+@media screen and (max-height: 600px) {
+  .game {
+    width: 20rem;
+    height: 20rem;
+  }
+  .game-name {
+    position: absolute;
+    top: 0;
+    font-size: 2rem;
+    margin: 0;
+  }
+  .game-whose-turn-text {
+    margin: 0rem;
+    font-size: 2rem;
+  }
+  .game-board .one {
+    border-bottom: 2px solid #e57906;
+    border-right: 2px solid #e57906;
+  }
+  .game-board .two {
+    border-left: 2px solid #e57906;
+    border-bottom: 2px solid #e57906;
+    border-right: 2px solid #e57906;
+  }
+  .game-board .three {
+    border-left: 2px solid #e57906;
+    border-bottom: 2px solid #e57906;
+  }
+  .game-board .four {
+    border-top: 2px solid #e57906;
+    border-right: 2px solid #e57906;
+    border-bottom: 2px solid #e57906;
+  }
+  .game-board .five {
+    border: 2px solid #e57906;
+  }
+  .game-board .six {
+    border-left: 2px solid #e57906;
+    border-top: 2px solid #e57906;
+    border-bottom: 2px solid #e57906;
+  }
+  .game-board .seven {
+    border-top: 2px solid #e57906;
+    border-right: 2px solid #e57906;
+  }
+  .game-board .eight {
+    border-right: 2px solid #e57906;
+    border-left: 2px solid #e57906;
+    border-top: 2px solid #e57906;
+  }
+  .game-board .nine {
+    border-top: 2px solid #e57906;
+    border-left: 2px solid #e57906;
+  }
+  .game-square {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    height: 6.65rem;
+    width: 6.65rem;
+  }
+  .game-square .sign {
+    font-size: 5rem;
+  }
+  .game-play-btn-oneP {
+    top: 150px;
+  }
+  .game-play-btn-twoP {
+    top: 300px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .game {
+    width: 35rem;
+    height: 35rem;
+  }
+  .game-name {
+    position: absolute;
+    top: 0;
+    font-size: 5rem;
+    margin: 0;
+  }
+  .game-board .one {
+    border-bottom: 4px solid #e57906;
+    border-right: 4px solid #e57906;
+  }
+  .game-board .two {
+    border-left: 4px solid #e57906;
+    border-bottom: 4px solid #e57906;
+    border-right: 4px solid #e57906;
+  }
+  .game-board .three {
+    border-left: 4px solid #e57906;
+    border-bottom: 4px solid #e57906;
+  }
+  .game-board .four {
+    border-top: 4px solid #e57906;
+    border-right: 4px solid #e57906;
+    border-bottom: 4px solid #e57906;
+  }
+  .game-board .five {
+    border: 4px solid #e57906;
+  }
+  .game-board .six {
+    border-left: 4px solid #e57906;
+    border-top: 4px solid #e57906;
+    border-bottom: 4px solid #e57906;
+  }
+  .game-board .seven {
+    border-top: 4px solid #e57906;
+    border-right: 4px solid #e57906;
+  }
+  .game-board .eight {
+    border-right: 4px solid #e57906;
+    border-left: 4px solid #e57906;
+    border-top: 4px solid #e57906;
+  }
+  .game-board .nine {
+    border-top: 4px solid #e57906;
+    border-left: 4px solid #e57906;
+  }
+  .game-square {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    height: 11.65rem;
+    width: 11.65rem;
+  }
+  .game-square .sign {
+    font-size: 9rem;
+  }
+  .sizer {
+    font-size: 8rem;
+    position: absolute;
+    top: 38vh;
+    z-index: 5;
+    color: #72e506;
+    -webkit-transition: ease-in-out 0.1s;
+    transition: ease-in-out 0.1s;
+  }
+  .sizer-red {
+    font-size: 8rem;
+    position: absolute;
+    top: 38vh;
+    z-index: 5;
+    color: #e52f06;
+    -webkit-transition: ease-in-out 0.1s;
+    transition: ease-in-out 0.1s;
+  }
+  .positioner {
+    position: absolute;
+    top: 25vh;
+    z-index: 8;
+  }
 }
 
 body::-webkit-scrollbar {
