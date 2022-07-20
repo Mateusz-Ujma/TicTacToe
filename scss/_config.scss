@@ -5,6 +5,7 @@ $green-color: #72e506;
 $purple-color: #7906e5;
 $yellow-color: #e5c306;
 $grey-color: #747474;
+$grey-color-ligth: #b1b0b0;
 $grey-color-opacity: #74747430;
 $black-color: #272727;
 
@@ -30,55 +31,76 @@ $black-color: #272727;
     @include text-shadow;
 }
 
+@mixin media-md-width {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+@mixin media-lg-width {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+@mixin media-xl-width {
+    @media screen and (min-width: 1600px) {
+        @content;
+    }
+}
+@mixin media-md-height {
+    @media screen and (min-height: 768px) {
+        @content;
+    }
+}
+
 .win-line-one {
     visibility: visible;
     position: absolute;
-    top: 26vh;
-    left: 37vw;
+    top: 280px;
+    left: 70px;
     background: $green-color;
     height: 20px;
-    width: 25vw;
+    width: 320px;
     z-index: 3;
 }
 .win-line-two {
     visibility: visible;
     position: absolute;
-    top: 48vh;
-    left: 37vw;
+    top: 410px;
+    left: 70px;
     background: $green-color;
     height: 20px;
-    width: 25vw;
+    width: 320px;
     z-index: 3;
 }
 .win-line-three {
     visibility: visible;
     position: absolute;
-    top: 71vh;
-    left: 37vw;
-    background: $red-color;
+    top: 540px;
+    left: 70px;
+    background: $green-color;
     height: 20px;
-    width: 25vw;
+    width: 320px;
     z-index: 3;
 }
 .win-line-four {
     visibility: visible;
     position: absolute;
-    top: 48vh;
-    left: 25vw;
+    top: 400px;
+    left: -70px;
     background: $green-color;
     height: 20px;
-    width: 28vw;
+    width: 320px;
     transform: rotate(90deg) translate(0px, 0px);
     z-index: 3;
 }
 .win-line-five {
     visibility: visible;
     position: absolute;
-    top: 48vh;
-    left: 36vw;
+    top: 400px;
+    left: 65px;
     background: $green-color;
     height: 20px;
-    width: 28vw;
+    width: 320px;
     transform: rotate(90deg) translate(0px, 0px);
     z-index: 3;
 }
@@ -117,12 +139,12 @@ $black-color: #272727;
 }
 
 .sizer {
-    font-size: 10rem;
+    font-size: 4rem;
     position: absolute;
     top: 38vh;
     z-index: 5;
     color: $green-color;
-    @include transition-ease(.4s)
+    @include transition-ease(.1s)
 }
 
 .positioner {

@@ -14,14 +14,18 @@
     <script defer src="/js/main.js"></script>
 </head>
 
-<body>
+<body onload="startSite();">
     <h1 class="game-name">TIC TAC TOE</h1>
-    <button class="game-play-btn">
-        <span class="game-play-btn-text"> Let's Go</span>
+    <button class="game-play-btn-oneP">
+        <span class="game-play-btn-text"> One Player</span>
     </button>
+    <button class="game-play-btn-twoP">
+        <span class="game-play-btn-text"> Two Player</span>
+    </button>
+   
     <main class="game">
         <div class="game-board">
-            <div class="game-win-line"></div>
+            <div class="game-win-line win-line-five"></div>
             <div class="game-square one">
 
             </div>
@@ -59,7 +63,7 @@
         <i class="fa-regular fa-circle"></i>
     </span>
     </p>
-    <button class="game-reset-btn not-visible" >
+    <button class="game-reset-btn " >
         <span class="game-reset-btn-text">Restart?</span>
     </button>
 </body>

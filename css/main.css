@@ -12,44 +12,44 @@
 .win-line-one {
   visibility: visible;
   position: absolute;
-  top: 26vh;
-  left: 37vw;
+  top: 280px;
+  left: 70px;
   background: #72e506;
   height: 20px;
-  width: 25vw;
+  width: 320px;
   z-index: 3;
 }
 
 .win-line-two {
   visibility: visible;
   position: absolute;
-  top: 48vh;
-  left: 37vw;
+  top: 410px;
+  left: 70px;
   background: #72e506;
   height: 20px;
-  width: 25vw;
+  width: 320px;
   z-index: 3;
 }
 
 .win-line-three {
   visibility: visible;
   position: absolute;
-  top: 71vh;
-  left: 37vw;
-  background: #e52f06;
+  top: 540px;
+  left: 70px;
+  background: #72e506;
   height: 20px;
-  width: 25vw;
+  width: 320px;
   z-index: 3;
 }
 
 .win-line-four {
   visibility: visible;
   position: absolute;
-  top: 48vh;
-  left: 25vw;
+  top: 400px;
+  left: -70px;
   background: #72e506;
   height: 20px;
-  width: 28vw;
+  width: 320px;
   -webkit-transform: rotate(90deg) translate(0px, 0px);
           transform: rotate(90deg) translate(0px, 0px);
   z-index: 3;
@@ -58,11 +58,11 @@
 .win-line-five {
   visibility: visible;
   position: absolute;
-  top: 48vh;
-  left: 36vw;
+  top: 400px;
+  left: 65px;
   background: #72e506;
   height: 20px;
-  width: 28vw;
+  width: 320px;
   -webkit-transform: rotate(90deg) translate(0px, 0px);
           transform: rotate(90deg) translate(0px, 0px);
   z-index: 3;
@@ -108,13 +108,13 @@
 }
 
 .sizer {
-  font-size: 10rem;
+  font-size: 4rem;
   position: absolute;
   top: 38vh;
   z-index: 5;
   color: #72e506;
-  -webkit-transition: ease-in-out 0.4s;
-  transition: ease-in-out 0.4s;
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
 }
 
 .positioner {
@@ -128,7 +128,7 @@
           box-shadow: 0 0 8px 1px #272727;
   visibility: hidden;
   font-family: "Kanit", sans-serif;
-  background: #7906e5;
+  background: #b1b0b0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,14 +139,15 @@
       -ms-flex-align: center;
           align-items: center;
   z-index: 5;
-  width: 36rem;
+  width: 25rem;
+  height: 25rem;
 }
 
 .game-name {
   position: absolute;
   top: 0;
   margin: 1rem;
-  font-size: 5rem;
+  font-size: 3rem;
   color: #e57906;
   text-shadow: 1px 2px 6px #272727;
 }
@@ -165,8 +166,8 @@
   color: #e57906;
   font-weight: 700;
   text-shadow: 1px 2px 6px #272727;
-  -webkit-transition: ease-in-out 5s;
-  transition: ease-in-out 5s;
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
 }
 
 .game-whose-turn-bg {
@@ -177,8 +178,8 @@
   height: 100vh;
   background: #747474;
   z-index: 5;
-  -webkit-transition: ease-in-out 5s;
-  transition: ease-in-out 5s;
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
 }
 
 .game-board {
@@ -197,51 +198,51 @@
 }
 
 .game-board .one {
-  border-bottom: 5px solid #e57906;
-  border-right: 5px solid #e57906;
+  border-bottom: 2px solid #e57906;
+  border-right: 2px solid #e57906;
 }
 
 .game-board .two {
-  border-left: 5px solid #e57906;
-  border-bottom: 5px solid #e57906;
-  border-right: 5px solid #e57906;
+  border-left: 2px solid #e57906;
+  border-bottom: 2px solid #e57906;
+  border-right: 2px solid #e57906;
 }
 
 .game-board .three {
-  border-left: 5px solid #e57906;
-  border-bottom: 5px solid #e57906;
+  border-left: 2px solid #e57906;
+  border-bottom: 2px solid #e57906;
 }
 
 .game-board .four {
-  border-top: 5px solid #e57906;
-  border-right: 5px solid #e57906;
-  border-bottom: 5px solid #e57906;
+  border-top: 2px solid #e57906;
+  border-right: 2px solid #e57906;
+  border-bottom: 2px solid #e57906;
 }
 
 .game-board .five {
-  border: 5px solid #e57906;
+  border: 2px solid #e57906;
 }
 
 .game-board .six {
-  border-left: 5px solid #e57906;
-  border-top: 5px solid #e57906;
-  border-bottom: 5px solid #e57906;
+  border-left: 2px solid #e57906;
+  border-top: 2px solid #e57906;
+  border-bottom: 2px solid #e57906;
 }
 
 .game-board .seven {
-  border-top: 5px solid #e57906;
-  border-right: 5px solid #e57906;
+  border-top: 2px solid #e57906;
+  border-right: 2px solid #e57906;
 }
 
 .game-board .eight {
-  border-right: 5px solid #e57906;
-  border-left: 5px solid #e57906;
-  border-top: 5px solid #e57906;
+  border-right: 2px solid #e57906;
+  border-left: 2px solid #e57906;
+  border-top: 2px solid #e57906;
 }
 
 .game-board .nine {
-  border-top: 5px solid #e57906;
-  border-left: 5px solid #e57906;
+  border-top: 2px solid #e57906;
+  border-left: 2px solid #e57906;
 }
 
 .game-square {
@@ -255,16 +256,8 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  height: 12rem;
-  width: 12rem;
-}
-
-.game-square-in {
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  height: 12rem;
-  width: 12rem;
+  height: 8.35rem;
+  width: 8.35rem;
 }
 
 .game-square:hover {
@@ -272,24 +265,24 @@
 }
 
 .game-square .sign {
-  margin: -1rem;
-  font-size: 9rem;
+  margin: 0;
+  font-size: 6.5rem;
   color: #e5c306;
 }
 
 .game-win-line {
   position: absolute;
-  visibility: hidden;
   border-radius: 45px;
 }
 
-.game-play-btn {
+.game-play-btn-oneP {
+  visibility: hidden;
   height: 4rem;
   width: 25rem;
   position: absolute;
-  top: 40vh;
+  top: 300px;
   z-index: 10;
-  background: #747474;
+  background: #b1b0b0;
   border: none;
   border-radius: 4px;
   font-size: 2.5rem;
@@ -299,20 +292,58 @@
           box-shadow: 0 0 8px 1px #272727;
 }
 
-.game-play-btn-text {
+.game-play-btn-oneP-text {
   display: block;
   height: 4rem;
   width: 100%;
   text-shadow: 1px 2px 6px #272727;
 }
 
-.game-play-btn-text:hover {
+.game-play-btn-oneP-text:hover {
   text-shadow: 1px 1px 1px #272727;
   -webkit-transition: ease-in-out 0.1s;
   transition: ease-in-out 0.1s;
 }
 
-.game-play-btn:hover {
+.game-play-btn-oneP:hover {
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
+  -webkit-box-shadow: 0 0 2px 1px #272727;
+          box-shadow: 0 0 2px 1px #272727;
+}
+
+.game-play-btn-twoP {
+  margin-bottom: 10px;
+  visibility: hidden;
+  height: 4rem;
+  width: 25rem;
+  position: absolute;
+  top: 500px;
+  z-index: 10;
+  background: #b1b0b0;
+  border: none;
+  border-radius: 4px;
+  font-size: 2.5rem;
+  font-family: "Kanit", sans-serif;
+  color: #e57906;
+  -webkit-box-shadow: 0 0 8px 1px #272727;
+          box-shadow: 0 0 8px 1px #272727;
+}
+
+.game-play-btn-twoP-text {
+  display: block;
+  height: 4rem;
+  width: 100%;
+  text-shadow: 1px 2px 6px #272727;
+}
+
+.game-play-btn-twoP-text:hover {
+  text-shadow: 1px 1px 1px #272727;
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
+}
+
+.game-play-btn-twoP:hover {
   -webkit-transition: ease-in-out 0.1s;
   transition: ease-in-out 0.1s;
   -webkit-box-shadow: 0 0 2px 1px #272727;
@@ -320,13 +351,14 @@
 }
 
 .game-reset-btn {
+  visibility: hidden;
   z-index: 10;
   height: 4rem;
   width: 25rem;
   position: absolute;
   top: 60vh;
   z-index: 10;
-  background: #747474;
+  background: #b1b0b0;
   border: none;
   border-radius: 4px;
   font-size: 2.5rem;
@@ -362,7 +394,7 @@ body::-webkit-scrollbar {
 
 body {
   font-family: "Kanit", sans-serif;
-  background: #0671e4;
+  background: #747474;
   height: 100vh;
   margin: 0;
   display: -webkit-box;

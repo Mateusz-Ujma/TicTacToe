@@ -1,4 +1,4 @@
-@import "config", "gamePanel";
+@import "config", "gamePanel","responsive";
 
 body::-webkit-scrollbar {
     display: none;
@@ -7,7 +7,7 @@ body::-webkit-scrollbar {
 body {
     
     font-family: "Kanit", sans-serif;
-    background: $blue-color;
+    background: $grey-color;
     height: 100vh;
     margin: 0;
     display: flex;
