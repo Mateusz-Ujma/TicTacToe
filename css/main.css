@@ -13,7 +13,7 @@
   visibility: visible;
   position: absolute;
   top: 280px;
-  left: 70px;
+  left: 15vw;
   background: #72e506;
   height: 20px;
   width: 320px;
@@ -24,7 +24,7 @@
   visibility: visible;
   position: absolute;
   top: 410px;
-  left: 70px;
+  left: 15vw;
   background: #72e506;
   height: 20px;
   width: 320px;
@@ -35,7 +35,7 @@
   visibility: visible;
   position: absolute;
   top: 540px;
-  left: 70px;
+  left: 15vw;
   background: #72e506;
   height: 20px;
   width: 320px;
@@ -46,7 +46,7 @@
   visibility: visible;
   position: absolute;
   top: 400px;
-  left: -70px;
+  left: -15vw;
   background: #72e506;
   height: 20px;
   width: 320px;
@@ -71,11 +71,11 @@
 .win-line-six {
   visibility: visible;
   position: absolute;
-  top: 48vh;
-  left: 47vw;
+  top: 400px;
+  left: 43vw;
   background: #72e506;
   height: 20px;
-  width: 28vw;
+  width: 320px;
   -webkit-transform: rotate(90deg) translate(0px, 0px);
           transform: rotate(90deg) translate(0px, 0px);
   z-index: 3;
