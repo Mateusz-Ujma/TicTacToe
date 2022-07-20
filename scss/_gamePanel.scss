@@ -102,7 +102,7 @@
         width: 8.35rem;
         
         &:hover {
-            background-color: $grey-color-opacity;
+            
         }
         .sign {
             margin: 0;
@@ -111,7 +111,8 @@
         }
     }
    
-    &-play-btn-oneP {
+    &-play-btn-oneP {        
+        margin-bottom: 10px;
         visibility: hidden;
         height: 4rem;
         width: 25rem;
@@ -131,13 +132,11 @@
             width: 100%;
             @include text-shadow;
             &:hover {
-                text-shadow: 1px 1px 1px $black-color;
-                @include transition-ease(0.1s);
+               
             }
         }
         &:hover {
-            @include transition-ease(0.1s);
-            box-shadow: 0 0 2px 1px $black-color;
+            
         }
     }
     &-play-btn-twoP {        
@@ -161,13 +160,11 @@
             width: 100%;
             @include text-shadow;
             &:hover {
-                text-shadow: 1px 1px 1px $black-color;
-                @include transition-ease(0.1s);
+               
             }
         }
         &:hover {
-            @include transition-ease(0.1s);
-            box-shadow: 0 0 2px 1px $black-color;
+            
         }
     }
     &-reset-btn {
@@ -191,13 +188,11 @@
             width: 100%;
             @include text-shadow;
             &:hover {
-                text-shadow: 1px 1px 1px $black-color;
-                @include transition-ease(0.1s);
+                
             }
         }
         &:hover {
-            @include transition-ease(0.1s);
-            box-shadow: 0 0 2px 1px $black-color;
+            
         }
     }
 }

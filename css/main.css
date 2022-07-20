@@ -180,10 +180,6 @@
   width: 8.35rem;
 }
 
-.game-square:hover {
-  background-color: #74747430;
-}
-
 .game-square .sign {
   margin: 0;
   font-size: 6.5rem;
@@ -191,6 +187,7 @@
 }
 
 .game-play-btn-oneP {
+  margin-bottom: 10px;
   visibility: hidden;
   height: 4rem;
   width: 25rem;
@@ -212,19 +209,6 @@
   height: 4rem;
   width: 100%;
   text-shadow: 1px 2px 6px #272727;
-}
-
-.game-play-btn-oneP-text:hover {
-  text-shadow: 1px 1px 1px #272727;
-  -webkit-transition: ease-in-out 0.1s;
-  transition: ease-in-out 0.1s;
-}
-
-.game-play-btn-oneP:hover {
-  -webkit-transition: ease-in-out 0.1s;
-  transition: ease-in-out 0.1s;
-  -webkit-box-shadow: 0 0 2px 1px #272727;
-          box-shadow: 0 0 2px 1px #272727;
 }
 
 .game-play-btn-twoP {
@@ -252,19 +236,6 @@
   text-shadow: 1px 2px 6px #272727;
 }
 
-.game-play-btn-twoP-text:hover {
-  text-shadow: 1px 1px 1px #272727;
-  -webkit-transition: ease-in-out 0.1s;
-  transition: ease-in-out 0.1s;
-}
-
-.game-play-btn-twoP:hover {
-  -webkit-transition: ease-in-out 0.1s;
-  transition: ease-in-out 0.1s;
-  -webkit-box-shadow: 0 0 2px 1px #272727;
-          box-shadow: 0 0 2px 1px #272727;
-}
-
 .game-reset-btn {
   visibility: hidden;
   z-index: 10;
@@ -288,19 +259,6 @@
   height: 4rem;
   width: 100%;
   text-shadow: 1px 2px 6px #272727;
-}
-
-.game-reset-btn-text:hover {
-  text-shadow: 1px 1px 1px #272727;
-  -webkit-transition: ease-in-out 0.1s;
-  transition: ease-in-out 0.1s;
-}
-
-.game-reset-btn:hover {
-  -webkit-transition: ease-in-out 0.1s;
-  transition: ease-in-out 0.1s;
-  -webkit-box-shadow: 0 0 2px 1px #272727;
-          box-shadow: 0 0 2px 1px #272727;
 }
 
 @media screen and (max-height: 600px) {
@@ -446,10 +404,50 @@
     height: 11.65rem;
     width: 11.65rem;
   }
+  .game-square:hover {
+    background-color: #74747430;
+  }
   .game-square .sign {
     font-size: 9rem;
   }
-  .sizer {
+  .game-play-btn-twoP-text {
+    display: block;
+    height: 4rem;
+    width: 100%;
+    text-shadow: 1px 2px 6px #272727;
+  }
+  .game-play-btn-twoP-text:hover {
+    text-shadow: 1px 1px 1px #272727;
+    -webkit-transition: ease-in-out 0.1s;
+    transition: ease-in-out 0.1s;
+  }
+  .game-play-btn-twoP:hover {
+    -webkit-transition: ease-in-out 0.1s;
+    transition: ease-in-out 0.1s;
+    -webkit-box-shadow: 0 0 2px 1px #272727;
+            box-shadow: 0 0 2px 1px #272727;
+  }
+  .game-play-btn-twoP-reset-btn-text:hover {
+    display: block;
+    height: 4rem;
+    width: 100%;
+    text-shadow: 1px 2px 6px #272727;
+    text-shadow: 1px 1px 1px #272727;
+    -webkit-transition: ease-in-out 0.1s;
+    transition: ease-in-out 0.1s;
+  }
+  .game-play-btn-twoP-reset-btn-text:hover:hover {
+    text-shadow: 1px 1px 1px #272727;
+    -webkit-transition: ease-in-out 0.1s;
+    transition: ease-in-out 0.1s;
+  }
+  .game-play-btn-twoP-reset-btn:hover {
+    -webkit-transition: ease-in-out 0.1s;
+    transition: ease-in-out 0.1s;
+    -webkit-box-shadow: 0 0 2px 1px #272727;
+            box-shadow: 0 0 2px 1px #272727;
+  }
+  .game .sizer {
     font-size: 8rem;
     position: absolute;
     top: 38vh;
@@ -458,7 +456,7 @@
     -webkit-transition: ease-in-out 0.1s;
     transition: ease-in-out 0.1s;
   }
-  .sizer-red {
+  .game .sizer-red {
     font-size: 8rem;
     position: absolute;
     top: 38vh;
@@ -467,7 +465,7 @@
     -webkit-transition: ease-in-out 0.1s;
     transition: ease-in-out 0.1s;
   }
-  .positioner {
+  .game .positioner {
     position: absolute;
     top: 25vh;
     z-index: 8;

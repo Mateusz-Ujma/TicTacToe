@@ -357,13 +357,8 @@ function placeSign() {
         }
 
     }
-
-
     turnNumber++;
     whoWin();
-
-
-
 }
 
 function botPlayer() {
