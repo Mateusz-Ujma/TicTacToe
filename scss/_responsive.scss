@@ -1,208 +1,215 @@
 @include media-md-height {
-    .game {
-        width: 20rem;
-        height: 20rem;
+  .game {
+    width: 20rem;
+    height: 20rem;
 
-        &-name {
-            position: absolute;
-            top: 0;
-            font-size: 2rem;
-            margin: 0;
-        }
-        &-whose-turn {
-            &-text {
-                margin: 0rem;
-                font-size: 2rem;
-            }
-        }
-
-        &-board {
-            .one {
-                border-bottom: 2px solid $orange-color;
-                border-right: 2px solid $orange-color;
-            }
-            .two {
-                border-left: 2px solid $orange-color;
-                border-bottom: 2px solid $orange-color;
-                border-right: 2px solid $orange-color;
-            }
-            .three {
-                border-left: 2px solid $orange-color;
-                border-bottom: 2px solid $orange-color;
-            }
-            .four {
-                border-top: 2px solid $orange-color;
-                border-right: 2px solid $orange-color;
-                border-bottom: 2px solid $orange-color;
-            }
-            .five {
-                border: 2px solid $orange-color;
-            }
-            .six {
-                border-left: 2px solid $orange-color;
-                border-top: 2px solid $orange-color;
-                border-bottom: 2px solid $orange-color;
-            }
-            .seven {
-                border-top: 2px solid $orange-color;
-                border-right: 2px solid $orange-color;
-            }
-            .eight {
-                border-right: 2px solid $orange-color;
-                border-left: 2px solid $orange-color;
-                border-top: 2px solid $orange-color;
-            }
-            .nine {
-                border-top: 2px solid $orange-color;
-                border-left: 2px solid $orange-color;
-            }
-        }
-        &-square {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            height: 6.65rem;
-            width: 6.65rem;
-            .sign {
-                font-size: 5rem;
-            }
-        }
-
-        &-play-btn-oneP {
-            top: 150px;
-        }
-        &-play-btn-twoP {
-            top: 300px;
-        }
+    &-name {
+      position: absolute;
+      top: 0;
+      font-size: 2rem;
+      margin: 0;
     }
+    &-whose-turn {
+      &-text {
+        margin: 0rem;
+        font-size: 2rem;
+      }
+    }
+
+    &-board {
+      .one {
+        border-bottom: 2px solid $orange-color;
+        border-right: 2px solid $orange-color;
+      }
+      .two {
+        border-left: 2px solid $orange-color;
+        border-bottom: 2px solid $orange-color;
+        border-right: 2px solid $orange-color;
+      }
+      .three {
+        border-left: 2px solid $orange-color;
+        border-bottom: 2px solid $orange-color;
+      }
+      .four {
+        border-top: 2px solid $orange-color;
+        border-right: 2px solid $orange-color;
+        border-bottom: 2px solid $orange-color;
+      }
+      .five {
+        border: 2px solid $orange-color;
+      }
+      .six {
+        border-left: 2px solid $orange-color;
+        border-top: 2px solid $orange-color;
+        border-bottom: 2px solid $orange-color;
+      }
+      .seven {
+        border-top: 2px solid $orange-color;
+        border-right: 2px solid $orange-color;
+      }
+      .eight {
+        border-right: 2px solid $orange-color;
+        border-left: 2px solid $orange-color;
+        border-top: 2px solid $orange-color;
+      }
+      .nine {
+        border-top: 2px solid $orange-color;
+        border-left: 2px solid $orange-color;
+      }
+    }
+    &-square {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 6.65rem;
+      width: 6.65rem;
+      .sign {
+        font-size: 5rem;
+      }
+    }
+
+    &-play-btn-oneP {
+      top: 150px;
+    }
+    &-play-btn-twoP {
+      top: 300px;
+    }
+  }
 }
 
 @include media-md-width {
-    .game {
-        width: 35rem;
-        height: 35rem;
+  .game {
+    width: 22rem;
+    height: 22rem;
 
-        &-name {
-            position: absolute;
-            top: 0;
-            font-size: 5rem;
-            margin: 0;
-        }
-
-        &-board {
-            .one {
-                border-bottom: 4px solid $orange-color;
-                border-right: 4px solid $orange-color;
-            }
-            .two {
-                border-left: 4px solid $orange-color;
-                border-bottom: 4px solid $orange-color;
-                border-right: 4px solid $orange-color;
-            }
-            .three {
-                border-left: 4px solid $orange-color;
-                border-bottom: 4px solid $orange-color;
-            }
-            .four {
-                border-top: 4px solid $orange-color;
-                border-right: 4px solid $orange-color;
-                border-bottom: 4px solid $orange-color;
-            }
-            .five {
-                border: 4px solid $orange-color;
-            }
-            .six {
-                border-left: 4px solid $orange-color;
-                border-top: 4px solid $orange-color;
-                border-bottom: 4px solid $orange-color;
-            }
-            .seven {
-                border-top: 4px solid $orange-color;
-                border-right: 4px solid $orange-color;
-            }
-            .eight {
-                border-right: 4px solid $orange-color;
-                border-left: 4px solid $orange-color;
-                border-top: 4px solid $orange-color;
-            }
-            .nine {
-                border-top: 4px solid $orange-color;
-                border-left: 4px solid $orange-color;
-            }
-        }
-        &-square {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            height: 11.65rem;
-            width: 11.65rem;
-            &:hover {
-                background-color: $grey-color-opacity;
-            }
-            .sign {
-                font-size: 9rem;
-            }
-        }
-
-        &-play-btn-twoP {
-            &-text {
-                display: block;
-                height: 4rem;
-                width: 100%;
-                @include text-shadow;
-                &:hover {
-                    text-shadow: 1px 1px 1px $black-color;
-                    @include transition-ease(0.1s);
-                }
-            }
-            &:hover {
-                @include transition-ease(0.1s);
-                box-shadow: 0 0 2px 1px $black-color;
-            }
-            &-reset-btn {
-                &-text {
-                    &:hover {
-                        display: block;
-                        height: 4rem;
-                        width: 100%;
-                        @include text-shadow;
-                        &:hover {
-                            text-shadow: 1px 1px 1px $black-color;
-                            @include transition-ease(0.1s);
-                        }
-                        text-shadow: 1px 1px 1px $black-color;
-                        @include transition-ease(0.1s);
-                    }
-                }
-                &:hover {
-                    @include transition-ease(0.1s);
-                    box-shadow: 0 0 2px 1px $black-color;
-                }
-            }
-        }
-        .sizer {
-            font-size: 8rem;
-            position: absolute;
-            top: 38vh;
-            z-index: 5;
-            color: $green-color;
-            @include transition-ease(0.1s);
-            &-red {
-                font-size: 8rem;
-                position: absolute;
-                top: 38vh;
-                z-index: 5;
-                color: $red-color;
-                @include transition-ease(0.1s);
-            }
-        }
-
-        .positioner {
-            position: absolute;
-            top: 25vh;
-            z-index: 8;
-        }
+    &-name {
+      position: absolute;
+      top: 0;
+      font-size: 4rem;
+      margin: 0;
     }
+
+    &-board {
+      .one {
+        border-bottom: 2px solid $orange-color;
+        border-right: 2px solid $orange-color;
+      }
+      .two {
+        border-left: 2px solid $orange-color;
+        border-bottom: 2px solid $orange-color;
+        border-right: 2px solid $orange-color;
+      }
+      .three {
+        border-left: 2px solid $orange-color;
+        border-bottom: 2px solid $orange-color;
+      }
+      .four {
+        border-top: 2px solid $orange-color;
+        border-right: 2px solid $orange-color;
+        border-bottom: 2px solid $orange-color;
+      }
+      .five {
+        border: 2px solid $orange-color;
+      }
+      .six {
+        border-left: 2px solid $orange-color;
+        border-top: 2px solid $orange-color;
+        border-bottom: 2px solid $orange-color;
+      }
+      .seven {
+        border-top: 2px solid $orange-color;
+        border-right: 2px solid $orange-color;
+      }
+      .eight {
+        border-right: 2px solid $orange-color;
+        border-left: 2px solid $orange-color;
+        border-top: 2px solid $orange-color;
+      }
+      .nine {
+        border-top: 2px solid $orange-color;
+        border-left: 2px solid $orange-color;
+      }
+    }
+    &-square {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 7.33rem;
+      width: 7.33rem;
+      &:hover {
+        background-color: $grey-color-opacity;
+      }
+      .sign {
+        font-size: 5rem;
+      }
+    }
+    &-play-btn-oneP {
+      &-text {
+        display: block;
+        height: 4rem;
+        width: 100%;
+      }
+      @include text-shadow;
+      &:hover {
+        text-shadow: 1px 1px 1px $black-color;
+        @include transition-ease(0.1s);
+      }
+    }
+    &-play-btn-twoP {
+      &-text {
+        display: block;
+        height: 4rem;
+        width: 100%;
+      }
+      @include text-shadow;
+      &:hover {
+        text-shadow: 1px 1px 1px $black-color;
+        @include transition-ease(0.1s);
+      }
+    }
+    &-reset-btn {
+      &-text {
+        &:hover {
+          display: block;
+          height: 4rem;
+          width: 100%;
+          @include text-shadow;
+          &:hover {
+            text-shadow: 1px 1px 1px $black-color;
+            @include transition-ease(0.1s);
+          }
+          text-shadow: 1px 1px 1px $black-color;
+          @include transition-ease(0.1s);
+        }
+      }
+      &:hover {
+        @include transition-ease(0.1s);
+        box-shadow: 0 0 2px 1px $black-color;
+      }
+    }
+  }
+  .sizer {
+    font-size: 4rem;
+    position: absolute;
+    top: 38vh;
+    z-index: 5;
+    color: $green-color;
+    @include transition-ease(0.1s);
+    &-red {
+      font-size: 8rem;
+      position: absolute;
+      top: 38vh;
+      z-index: 5;
+      color: $red-color;
+      @include transition-ease(0.1s);
+    }
+  }
+
+  .positioner {
+    position: absolute;
+    top: 25vh;
+    z-index: 8;
+  }
 }

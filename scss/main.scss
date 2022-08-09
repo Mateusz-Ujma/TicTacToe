@@ -1,33 +1,32 @@
-@import "config", "gamePanel","responsive";
+@import 'config', 'gamePanel', 'responsive';
 
 body::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 body {
-    
-    font-family: "Kanit", sans-serif;
-    background: $grey-color;
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    scrollbar-width: 0;
+  font-family: 'Kanit', sans-serif;
+  background: $grey-color;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scrollbar-width: 0;
 }
 
 .visible {
-    @include transition-ease(0.4s);
-    visibility: visible;
+  @include transition-ease(0.4s);
+  visibility: visible;
 }
 .not-visible {
-    visibility: hidden;
-    @include transition-ease(0.4s);
+  visibility: hidden;
+  @include transition-ease(0.4s);
 }
 
 .non-clickable {
-    pointer-events: none;
+  pointer-events: none;
 }
-.clickable{
-    pointer-events: visible;
+.clickable {
+  pointer-events: visible;
 }
